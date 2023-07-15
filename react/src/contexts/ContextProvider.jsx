@@ -1,7 +1,7 @@
 import {createContext, useContext, useState} from "react";
 
 const StateContext = createContext({
-    user: null,
+    currentUser: null,
     token: null,
     setUser: () => {
     },
@@ -11,7 +11,7 @@ const StateContext = createContext({
 
 export const ContextProvider = ({children}) => {
     const [user, setUser] = useState({})
-    const [token, _setToken] = useState(null)
+    const [token, _setToken] = useState(123)
 
     const setToken = (token) => {
         _setToken(token);

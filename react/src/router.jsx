@@ -1,33 +1,45 @@
-import {createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom";
+import {createBrowserRouter, createRoutesFromElements, Navigate, Route} from "react-router-dom";
 import Login from "./views/Login.jsx";
 import Signup from "./views/Signup.jsx";
 import NotFound from "./views/NotFound.jsx";
+import DefaultLayout from "./layouts/DefaultLayout.jsx";
+import GuestLayout from "./layouts/GuestLayout.jsx";
+import Users from "./views/Users.jsx";
 
-const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route>
-            <Route index element={<Login/>}/>
-            <Route path={"/signup"} element={<Signup/>}/>
-            <Route path={"*"} element={<NotFound/>}/>
-
-        </Route>
-    )
-)
-
-// const router = createBrowserRouter([
-//     {
-//         path: '/',
-//         element: <Login/>
-//     },
-//     {
-//         path: '/signup',
-//         element: <Signup/>
-//     },
-//     {
-//         path: '*',
-//         element: <NotFound/>
-//     }
-// ])
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <DefaultLayout/>,
+        children: [
+            {
+                path: '/',
+                element: <Navigate to="/users"/>
+            },
+            {
+                path: '/users',
+                element: <Users/>
+            }
+        ]
+    },
+    {
+        path: '/',
+        element: <GuestLayout/>,
+        children: [
+            {
+                path: '/login',
+                element: <Login/>
+            },
+            {
+                path: '/signup',
+                element: <Signup/>
+            }
+        ]
+    },
+    {
+        path: "*",
+        element: <NotFound/>
+    }
+])
 
 export default router
 
