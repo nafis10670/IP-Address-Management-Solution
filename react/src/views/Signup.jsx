@@ -20,6 +20,7 @@ function Signup() {
             password: passwordRef.current.value,
             password_confirmation: passwordConfirmationRef.current.value
         }
+        // console.log(payload)
 
         axiosClient.post('/signup', payload).then(({data}) => {
             setUser(data.user)
@@ -38,6 +39,13 @@ function Signup() {
             <div className="form">
                 <form onSubmit={onSubmit}>
                     <h1 className="title">Sign Up!</h1>
+                    {errors && (
+                        <div className="alert">
+                            {Object.keys(errors).map((key) => (
+                                <p key={key}>{errors[key][0]}</p>
+                            ))}
+                        </div>
+                    )}
                     <input ref={nameRef} type="text" placeholder="Full Name"/>
                     <input ref={emailRef} type="email" placeholder="Email Address"/>
                     <input ref={passwordRef} type="password" placeholder="Password"/>
