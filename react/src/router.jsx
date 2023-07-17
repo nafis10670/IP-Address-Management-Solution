@@ -5,6 +5,7 @@ import NotFound from "./views/NotFound.jsx";
 import DefaultLayout from "./layouts/DefaultLayout.jsx";
 import GuestLayout from "./layouts/GuestLayout.jsx";
 import Addresses from "./views/Addresses.jsx";
+import AddressForm from "./views/AddressForm.jsx";
 
 const router = createBrowserRouter([
     {
@@ -13,11 +14,19 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Navigate to="/users"/>
+                element: <Navigate to="/addresses"/>
             },
             {
                 path: '/addresses',
                 element: <Addresses/>
+            },
+            {
+                path: '/addresses/new',
+                element: <AddressForm key="create"/>
+            },
+            {
+                path: '/addresses/:id',
+                element: <AddressForm key="update"/>
             }
         ]
     },

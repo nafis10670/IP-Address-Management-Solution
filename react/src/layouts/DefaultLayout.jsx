@@ -28,7 +28,7 @@ function DefaultLayout(props) {
     return (
         <div id="defaultLayout">
             <aside>
-                <Link to="/users">Users</Link>
+                <Link to="/addresses">IP Addresses</Link>
             </aside>
             <div className="content">
                 <header>

@@ -122,7 +122,12 @@ table > thead > tr > th {
 table > tbody > tr > td {
     padding: 0.5rem 0.5rem;
     border-bottom: 1px solid #efefef;
-    white-space: nowrap;
+    white-space: normal;
+}
+
+.table-column {
+    max-width: 380px;
+    word-wrap: break-word;
 }
 
 .card {
@@ -244,6 +249,7 @@ table > tbody > tr > td {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
 }
+
 
 @keyframes fadeInDown {
     0% {
