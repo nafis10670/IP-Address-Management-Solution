@@ -36,7 +36,7 @@ function DefaultLayout(props) {
                         Header
                     </div>
                     <div>
-                        {user.name}
+                        {user.name} &nbsp; &nbsp;
                         <a onClick={onLogout}
                            className="btn-logout"
                            href="#">Logout</a>

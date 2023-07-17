@@ -4,7 +4,7 @@ import Signup from "./views/Signup.jsx";
 import NotFound from "./views/NotFound.jsx";
 import DefaultLayout from "./layouts/DefaultLayout.jsx";
 import GuestLayout from "./layouts/GuestLayout.jsx";
-import Users from "./views/Users.jsx";
+import Addresses from "./views/Addresses.jsx";
 
 const router = createBrowserRouter([
     {
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
                 element: <Navigate to="/users"/>
             },
             {
-                path: '/users',
-                element: <Users/>
+                path: '/addresses',
+                element: <Addresses/>
             }
         ]
     },
