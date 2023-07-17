@@ -47,6 +47,7 @@ input:focus {
     border-color: #5b08a7;
 }
 
+
 .btn,
 .btn-add,
 .btn-edit,
@@ -232,6 +233,12 @@ table > tbody > tr > td {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 24px;
+    color: indigo;
 }
 
 #defaultLayout main {

@@ -32,8 +32,8 @@ function DefaultLayout(props) {
             </aside>
             <div className="content">
                 <header>
-                    <div>
-                        Header
+                    <div className='header-title'>
+                        IP Address Management Solution
                     </div>
                     <div>
                         {user.name} &nbsp; &nbsp;
