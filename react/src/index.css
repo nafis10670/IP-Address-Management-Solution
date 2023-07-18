@@ -127,7 +127,7 @@ table > tbody > tr > td {
 }
 
 .table-column {
-    max-width: 380px;
+    max-width: 300px;
     word-wrap: break-word;
 }
 

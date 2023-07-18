@@ -16,7 +16,7 @@ class AddressController extends Controller
     public function index(): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
     {
         return AddressResource::collection(
-            Address::query()->orderBy('id', 'asc')->get()
+            Address::query()->orderBy('updated_at', 'desc')->get()
         );
     }
 

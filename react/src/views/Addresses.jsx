@@ -53,13 +53,14 @@ function Addresses(props) {
                         <th>IP Address</th>
                         <th>Comment</th>
                         <th>Created At</th>
+                        <th>Updated At</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
                     {loading && (
                         <tbody>
                         <tr>
-                            <td colSpan="5" className="text-center">
+                            <td colSpan="6" className="text-center">
                                 Loading...
                             </td>
                         </tr>
@@ -73,6 +74,7 @@ function Addresses(props) {
                                 <td>{u.ip_address}</td>
                                 <td className="table-column">{u.comment}</td>
                                 <td>{u.created_at}</td>
+                                <td>{u.updated_at}</td>
                                 <td>
                                     <Link
                                         className="btn-edit"
