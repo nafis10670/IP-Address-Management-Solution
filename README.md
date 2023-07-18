@@ -13,6 +13,14 @@ Reactjs is used for the frontend and PHP Laravel is used for the backend.
 8. Run `npm install`
 9. Run `npm run dev` to start vite server for React
 
+## Endpoints
+1. Login Page: `localhost:5173/login`
+2. Signup Page: `localhost:5173/signup`
+3. Dashboard Page: `localhost:5173/addresses` (Protected route)
+4. Add New IP Address Page: `localhost:5173/addresses/new` (Protected route)
+5. Edit IP Address Page: `localhost:5173/addresses/:id` (Protected route)
+6. Logout Endpoint: `localhost:5173/logout`
+
 
 ### Preview Images
 <img src="https://github.com/nafis10670/IP-Address-Management-Solution/assets/45102589/9f8f9f4c-4103-40f9-b5fa-3d09b1fa8b64" alt="Login Page" width=350>
